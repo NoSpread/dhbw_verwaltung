@@ -75,11 +75,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_home -> {
                 // Handle the camera action
             }
-            R.id.nav_gallery -> {
-
+            R.id.nav_profile -> {
+                intent = Intent(this, Profile::class.java)
+                startActivity(intent)
             }
-            R.id.nav_slideshow -> {
-
+            R.id.nav_dualis -> {
+                intent = Intent(this, Dualis_und_Lernfortschritt::class.java)
+                startActivity(intent)
             }
             R.id.nav_tools -> {
 
