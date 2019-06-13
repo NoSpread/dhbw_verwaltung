@@ -11,6 +11,9 @@ import android.support.design.widget.NavigationView
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.Menu
+import android.content.Intent
+import xyz.nospread.dhbw_verwaltung.ui.login.LoginActivity
+
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -65,6 +68,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
+            R.id.nav_login -> {
+                intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+            }
             R.id.nav_home -> {
                 // Handle the camera action
             }
