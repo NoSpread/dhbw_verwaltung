@@ -13,6 +13,8 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="menu_communication">Communication</string>
+
     <string name="title_activity_profile">Profile</string>
     <string name="title_activity_login">Sign in</string>
     <string name="prompt_email">Email</string>
