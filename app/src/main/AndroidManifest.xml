@@ -14,7 +14,6 @@
         <activity
             android:name=".Dualis_und_Lernfortschritt"
             android:label="@string/title_activity_dualis_und__lernfortschritt"
-            android:theme="@style/AppTheme.NoActionBar"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

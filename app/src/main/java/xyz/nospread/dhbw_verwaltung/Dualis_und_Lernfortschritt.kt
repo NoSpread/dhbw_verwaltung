@@ -10,7 +10,7 @@ class Dualis_und_Lernfortschritt : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dualis_und__lernfortschritt)
-        setSupportActionBar(toolbar)
+        //setSupportActionBar(toolbar)
 
     }
 }
