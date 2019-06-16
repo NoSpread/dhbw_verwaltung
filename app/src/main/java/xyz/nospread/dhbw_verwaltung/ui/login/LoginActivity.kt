@@ -14,10 +14,14 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_login.*
 
 import xyz.nospread.dhbw_verwaltung.R
+import java.util.regex.Pattern.compile
 
 class LoginActivity : AppCompatActivity() {
+
+
 
     private lateinit var loginViewModel: LoginViewModel
 
@@ -50,6 +54,8 @@ class LoginActivity : AppCompatActivity() {
 
         loginViewModel.loginResult.observe(this@LoginActivity, Observer {
             val loginResult = it ?: return@Observer
+
+
 
             loading.visibility = View.GONE
             if (loginResult.error != null) {
@@ -97,6 +103,8 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+
+
     private fun updateUiWithUser(model: LoggedInUserView) {
         val welcome = getString(R.string.welcome)
         val displayName = model.displayName
@@ -108,8 +116,31 @@ class LoginActivity : AppCompatActivity() {
         ).show()
     }
 
+
+
     private fun showLoginFailed(@StringRes errorString: Int) {
         Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
+    }
+
+    //E-Mail validator
+    private val emailRegex = compile(
+        "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
+                "\\@" +
+                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+                "(" +
+                "\\." +
+                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+                ")+"
+    )
+
+    //E-Mail an das Sekretariat
+    fun showPopUp(v: View) {
+        if (emailRegex.matcher(username.text.toString()).matches()) {
+            Toast.makeText(applicationContext, "An e-mail has been sent to the secretariat.", Toast.LENGTH_LONG).show()
+        }
+        else {
+            Toast.makeText(applicationContext, "Error: Enter your E-Mail first", Toast.LENGTH_LONG).show()
+        }
     }
 }
 

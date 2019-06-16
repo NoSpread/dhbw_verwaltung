@@ -24,6 +24,7 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="save_login">Stay logged in</string>
+    <string name="forgot_password">Forgot password?</string>
     <string name="dog_name">"Student: Bello"</string>
     <string name="dog_course">"Kurs: TINF18B</string>
     <string name="title_activity_dualis_und__lernfortschritt">Lernfortschritt</string>
