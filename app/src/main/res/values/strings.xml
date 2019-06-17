@@ -25,6 +25,8 @@
     <string name="login_failed">"Login failed"</string>
     <string name="save_login">Stay logged in</string>
     <string name="forgot_password">Forgot password?</string>
+    <string name="menu_communication">Communication</string>
+    <string name="menu_logout">Logout</string>
 
     <string name="dog_change_pic">Change Avatar</string>
     <string name="dog_name">Student:</string>

@@ -134,7 +134,7 @@ class LoginActivity : AppCompatActivity() {
     )
 
     //E-Mail an das Sekretariat
-    fun showPopUp(v: View) {
+    fun showPopUp() {
         if (emailRegex.matcher(username.text.toString()).matches()) {
             Toast.makeText(applicationContext, "An e-mail has been sent to the secretariat.", Toast.LENGTH_LONG).show()
         }
