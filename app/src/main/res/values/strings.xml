@@ -28,8 +28,18 @@
     <string name="login_failed">"Login failed"</string>
     <string name="save_login">Stay logged in</string>
     <string name="forgot_password">Forgot password?</string>
-    <string name="dog_name">"Student: Bello"</string>
-    <string name="dog_course">"Kurs: TINF18B</string>
+
+    <string name="dog_change_pic">Change Avatar</string>
+    <string name="dog_name">Student:</string>
+    <string name="dog_course">Kurs:</string>
+    <string name="dog_email">Email:</string>
+    <string name="dog_sth">sth:</string>
+    <string name="user_name">NAME</string>
+    <string name="user_course">KURS</string>
+    <string name="user_email">EMAIL</string>
+    <string name="user_sth">STH</string>
+
+
     <string name="title_activity_dualis_und__lernfortschritt">Lernfortschritt</string>
     <string name="noten">Leistungsübersicht Semester 1\nSchlüsselqualifikation: 2,5\n\nAnalysis I: 3,5\n\nTechnische Informatik (Digitaltechnik): 1,5\n\n
         Grundlagen und Logik: 2,0\n</string>
