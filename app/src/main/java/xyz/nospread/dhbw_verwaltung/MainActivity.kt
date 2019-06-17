@@ -83,8 +83,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 intent = Intent(this, Dualis_und_Lernfortschritt::class.java)
                 startActivity(intent)
             }
-            R.id.nav_tools -> {
-
+            R.id.nav_links -> {
+                intent = Intent(this, Links::class.java)
+                startActivity(intent)
             }
             R.id.nav_share -> {
 
