@@ -1,5 +1,6 @@
 package xyz.nospread.dhbw_verwaltung
 
+import android.app.PendingIntent.getActivity
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
@@ -11,8 +12,15 @@ import android.support.design.widget.NavigationView
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.Menu
-import android.content.Intent
 import xyz.nospread.dhbw_verwaltung.ui.login.LoginActivity
+import android.content.Intent
+import android.util.Log
+import android.widget.Button
+import java.util.*
+import android.provider.CalendarContract
+import android.content.ContentValues
+import android.content.ContentResolver
+import java.text.SimpleDateFormat
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -38,6 +46,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
         navView.setNavigationItemSelectedListener(this)
+
+        val calButton = findViewById<Button>(R.id.calendarButton)
+
+        calButton.setOnClickListener {
+            val dataFile = applicationContext.assets.open("lecture_times.csv").bufferedReader().readText()
+            val lines = dataFile.lines()
+
+            val formatter = SimpleDateFormat("dd.MM.yyyy HH:mm")
+
+            for (line in lines) {
+                val cols = line.split(";")
+
+                val cr = getContentResolver()
+                val values = ContentValues()
+                values.put(CalendarContract.Events.TITLE, cols[0]);
+                values.put(CalendarContract.Events.DTSTART, formatter.parse(cols[1]).time)
+                values.put(CalendarContract.Events.DTEND, formatter.parse(cols[2]).time)
+                values.put(CalendarContract.Events.CALENDAR_ID, 1) //TODO: Find correct calendar id
+                values.put(CalendarContract.Events.EVENT_TIMEZONE, TimeZone.getDefault().getID())
+                cr.insert(CalendarContract.Events.CONTENT_URI, values)
+            }
+        }
     }
 
     override fun onBackPressed() {
