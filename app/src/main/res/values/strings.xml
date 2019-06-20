@@ -1,42 +1,41 @@
 <resources>
-    <string name="app_name">dhbw_verwaltung</string>
+    <string name="app_name">DHBWorkplace</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_title">Nicht angemeldet!</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Einstellungen</string>
 
-    <string name="menu_home">Home</string>
+    <string name="menu_home">Start</string>
     <string name="menu_profile">Profil</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_links">Links</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
+    <string name="menu_share">Teilen</string>
+    <string name="menu_send">Senden</string>
     <string name="title_activity_profile">Profil</string>
-    <string name="title_activity_login">Sign in</string>
+    <string name="title_activity_login">Anmelden</string>
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid email</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
-    <string name="save_login">Stay logged in</string>
-    <string name="forgot_password">Forgot password?</string>
-    <string name="menu_communication">Communication</string>
-    <string name="menu_logout">Logout</string>
+    <string name="prompt_password">Passwort</string>
+    <string name="action_sign_in">Anmelden</string>
+    <string name="action_sign_in_short">Anmelden</string>
+    <string name="welcome">"Wilkommen!"</string>
+    <string name="invalid_username">Keine Valide Email</string>
+    <string name="invalid_password">Passwort muss mindestens 5 Zeichen haben</string>
+    <string name="login_failed">"Anmelden fehlgeschlaage"</string>
+    <string name="save_login">angemeldet bleiben</string>
+    <string name="forgot_password">Passwort vergessen?</string>
+    <string name="menu_communication">Chaträume</string>
+    <string name="menu_logout">Abmelden</string>
 
-    <string name="dog_change_pic">Change Avatar</string>
+    <string name="dog_change_pic">Profilbild ändern</string>
     <string name="dog_name">Student:</string>
     <string name="dog_course">Kurs:</string>
     <string name="dog_email">Email:</string>
-    <string name="dog_sth">sth:</string>
     <string name="user_name">NAME</string>
     <string name="user_course">KURS</string>
     <string name="user_email">EMAIL</string>
-    <string name="user_sth">STH</string>
+
 
 
     <string name="title_activity_dualis_und__lernfortschritt">Lernfortschritt</string>
