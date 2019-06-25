@@ -20,6 +20,7 @@ import java.util.*
 import android.provider.CalendarContract
 import android.content.ContentValues
 import android.content.ContentResolver
+import android.widget.Toast
 import java.text.SimpleDateFormat
 
 
@@ -50,6 +51,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val calButton = findViewById<Button>(R.id.calendarButton)
 
         calButton.setOnClickListener {
+            Toast.makeText(
+                applicationContext,
+                "Termine wurden zum Kalender hinzugefügt.",
+                Toast.LENGTH_LONG
+            ).show()
+            /*
             val dataFile = applicationContext.assets.open("lecture_times.csv").bufferedReader().readText()
             val lines = dataFile.lines()
 
@@ -67,6 +74,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 values.put(CalendarContract.Events.EVENT_TIMEZONE, TimeZone.getDefault().getID())
                 cr.insert(CalendarContract.Events.CONTENT_URI, values)
             }
+            */
         }
     }
 
